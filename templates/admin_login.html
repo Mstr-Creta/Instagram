@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhishTrace Lab Admin</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f6f8;display:grid;place-items:center;min-height:100vh;margin:0}
+form{background:#fff;padding:28px;border:1px solid #ddd;border-radius:8px;width:min(340px,90vw)}
+input,button{width:100%;padding:11px;margin-top:10px;box-sizing:border-box}
+button{background:#1769aa;color:#fff;border:0;border-radius:4px}
+.error{color:#a11}
+</style>
+</head>
+<body>
+<form method="post">
+  <h2>PhishTrace Lab Admin</h2>
+  <p>Local test records only</p>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <label for="password">Admin password</label>
+  <input id="password" name="password" type="password" required>
+  <button type="submit">View records</button>
+</form>
+</body>
+</html>
